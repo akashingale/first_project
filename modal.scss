@@ -1,0 +1,140 @@
+
+////////////////modal box for coupon///////////////////////////
+.applyCoupan-modal{
+    // border: 1px solid #000;
+    width: 75%;
+    display: block;
+    margin: auto;
+
+    @include breakpoint-max(calc-rem(567)){
+        width: 100%;
+    }    
+}
+.coupon__title{
+    font-size: calc-rem(18);
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #333332;
+    margin: auto;
+}
+.named__text{
+    font-size: 14px;
+    text-align: left;
+    color: #767676;
+}
+.couponcode__input{
+    border-radius: 3px;
+    background-color: #f0f0f0;
+    border: none;
+    width: 55%;
+    margin: 0px 20px 0px 0px;
+}
+.modal__closebtn{
+    color: #333332
+}
+.apply__coupon{
+    border-radius: 5px;
+    background-color: #c9a560;
+    width: 30%;
+    color: #fafafa;
+    font-size: calc-rem(16);
+    font-weight: 600;
+
+    @include breakpoint-max(calc-rem(520)){
+        font-size: calc-rem(14);
+    }
+}
+.coupon__dellabel{
+    width: 60%;
+}
+.coupon__code{
+    // border: 1px solid #000;
+    margin-top: 30px;
+}
+.coupon__description{
+    font-size: calc-rem(15);
+    text-align: left;
+    color: #767676;
+    margin: 0% 10%;
+}
+.delcoupon-name{
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #323a45;
+    margin: 0% 7%;
+}
+
+/////////////////////modal box for remove product//////////////////////////
+.removeProd-modal{
+   // border: 1px solid #000;
+    width: 75%;
+    display: block;
+    margin: auto;
+
+    @include breakpoint-max(calc-rem(567)){
+        width: 100%;
+    } 
+}
+.removeProd__img{
+    width: 35%;
+}
+.removeProd__image{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.removeOredr-img{
+    position: relative;
+    margin: 10px auto;
+    
+    &::before{
+        display: block;
+        width: 100%;
+        padding-top: 125%;
+        content: "";
+    }
+}
+.removeProd__displayimage{
+    max-height: 100%;
+    max-width: 100%;
+}
+.remove__confirmation{
+    width: 55%;
+}
+.removeProd__msg{
+    font-size: calc-rem(14);
+    line-height: 1.71;
+    text-align: left;
+    color: #757d87;
+}
+.removeProd{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.confirmation__btn{
+    margin:10px 0px;
+}
+.add__wish{
+    float: left;
+    font-size: calc-rem(15);
+    font-weight: 500;
+    line-height: 1;
+    text-align: left;
+    color: #323a45;
+    background: #ffffff;
+    border: none;
+}
+.remove__wish{
+    float: right;
+    font-size: calc-rem(15);
+    font-weight: 500;
+    line-height: 1;
+    text-align: left;
+    color: #323a45;
+    background: #ffffff;
+    border: none;
+}

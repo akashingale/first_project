@@ -1,0 +1,415 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Payment</title>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
+        <link href="../style/css/main.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="main_container">
+            <div class="styfi-container">
+                <!--section 1-->
+                <section class="payment-main-section">
+                    <div class="addaddr__maindata">
+                        <div class="addaddr__right">
+                           <div class="makepayment">
+                            <div class="inActivePayment" style="display: none;">
+                                <p class="delivery-title"><span>2.</span>MAKE PAYMENT</p>
+                            </div>
+                            <div class="activePayment" style="display: block;">
+                                <!-- payment section title bar -->
+                                <div class="payment-secTitle payment-secTitle_active">
+                                    <p class="delivery-title"><span>2.</span>MAKE PAYMENT</p>
+                                </div>
+                            </div>
+                                <ul class="payment-container1">
+                                    <li class="payment-catagory">                               
+                                        <input type="radio" name="a-toggle" id="one" checked>      
+                                        <label for="one" class="accordion-title">cash on delivery</label>
+                                        <ul class="test-accordion-items">
+                                            <div id="COD" class="tab_content1 cashondelivery">
+                                                <div class="payheading1">
+                                                    <p>Cash On Delivery</p>
+                                                </div>
+                                                <form action="https://www.styfi.in/checkout-order" method="post">
+                                                    <input type="hidden" id="COD" name="payment_method_type" value="COD" class="address-selection">
+                                                    <p class="totalAmt-pay">Total Amount Payable at the time of delivery : <span>Rs</span> <span class="payabaleAmt">1200                            .</span></p>
+                                                    <!--<p class="deliveryday">Standard Delivery in max 7 days.</p>-->
+                                                    <div class="codentermobile-number">
+                                                    <p class="entermob-numberterm">Includes <span id="codcharge">0</span> as convenience charge for Cash on Delivery
+                                                    </p>
+                                                    <p class="entermob-numberterm">
+                                                        All valid notes are accepted, including newly launched Rs.500 and Rs.2000 notes. You can also
+                                                        opt for Card on Delivery, subject to availability of card swipe machine.
+                                                        We recommend the use of Online payment methods for a smoother experience.
+                                                    </p>
+                                                    <div class="sendotp">
+                                                        <button type="submit" class="globalbtn placeorder-btn">
+                                                        Place Order
+                                                        </button>
+                                                    </div>
+                                                    <!--<div class="otpinput">
+                                                        <label for="">Mobile Number<span>*</span></label>
+                                                        <input type="text" id="otpMobile">
+                                                        </div>
+                                                        <div class="sendotp">
+                                                        <button type="button" class="globalbtn placeorder-btn" id="sendOTPBtn">
+                                                            Send OTP
+                                                        </button>
+                                                        <span class="mobileMsg"></span>
+                                                        </div>-->
+                                                    </div>
+                                                </form>
+                                                <div class="codenterotp-number" style="display:none">
+                                                <p class="entermob-numberterm enterotp-numberterm">
+                                                    We have sent you the One Time Password (OTP) on the
+                                                    above mentioned mobile number.
+                                                </p>
+                                                <!--OTP error message-->
+                                                <div class="otp-verification">
+                                                    <div class="enterotp-numberterm otpverify-error">
+                                                        <span class="global-icon"></span>
+                                                        <span>
+                                                        <p>OTP verification failed.</p>
+                                                        <button type="button" class="resendOtp-btn golden-text" id="resendError">Edit Mobile Number</button>
+                                                        </span>
+                                                    </div>
+                                                    <div class="enterotp-numberterm otpverify-sucess">
+                                                        <span class="global-icon"></span>
+                                                        <span>
+                                                        <p>OTP verification Sucess.</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="otpinput">
+                                                    <label for="otpValue">Enter your code<span>*</span></label>
+                                                    <input type="text" id="otpValue">
+                                                </div>
+                                                <div class="sendotp">
+                                                    <button type="button" class="globalbtn placeorder-btn" id="otpBtn">VERIFY</button>
+                                                </div>
+                                                <div class="resendotp">
+                                                    <p>Haven’t received OTP ?
+                                                        <span>
+                                                        <button type="button" class="resendOtp-btn golden-text" id="resendOTP">Resend</button>
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </ul>
+                                    </li>
+                                    <li class="payment-catagory">
+                                        <input type="radio" name="a-toggle" id="two" checked>      
+                                        <label for="two" class="accordion-title">net banking</label>
+                                        <ul class="test-accordion-items">
+                                            <div id="COD" class="tab_content1 cashondelivery">
+                                                <div class="payheading1">
+                                                    <p>Cash On Delivery</p>
+                                                </div>
+                                                <form action="https://www.styfi.in/checkout-order" method="post">
+                                                    <input type="hidden" id="COD" name="payment_method_type" value="COD" class="address-selection">
+                                                    <p class="totalAmt-pay">Total Amount Payable at the time of delivery : <span>Rs</span> <span class="payabaleAmt">1200                            .</span></p>
+                                                    <!--<p class="deliveryday">Standard Delivery in max 7 days.</p>-->
+                                                    <div class="codentermobile-number">
+                                                    <p class="entermob-numberterm">Includes <span id="codcharge">0</span> as convenience charge for Cash on Delivery
+                                                    </p>
+                                                    <p class="entermob-numberterm">
+                                                        All valid notes are accepted, including newly launched Rs.500 and Rs.2000 notes. You can also
+                                                        opt for Card on Delivery, subject to availability of card swipe machine.
+                                                        We recommend the use of Online payment methods for a smoother experience.
+                                                    </p>
+                                                    <div class="sendotp">
+                                                        <button type="submit" class="globalbtn placeorder-btn">
+                                                        Place Order
+                                                        </button>
+                                                    </div>
+                                                    <!--<div class="otpinput">
+                                                        <label for="">Mobile Number<span>*</span></label>
+                                                        <input type="text" id="otpMobile">
+                                                        </div>
+                                                        <div class="sendotp">
+                                                        <button type="button" class="globalbtn placeorder-btn" id="sendOTPBtn">
+                                                            Send OTP
+                                                        </button>
+                                                        <span class="mobileMsg"></span>
+                                                        </div>-->
+                                                    </div>
+                                                </form>
+                                                <div class="codenterotp-number" style="display:none">
+                                                <p class="entermob-numberterm enterotp-numberterm">
+                                                    We have sent you the One Time Password (OTP) on the
+                                                    above mentioned mobile number.
+                                                </p>
+                                                <!--OTP error message-->
+                                                <div class="otp-verification">
+                                                    <div class="enterotp-numberterm otpverify-error">
+                                                        <span class="global-icon"></span>
+                                                        <span>
+                                                        <p>OTP verification failed.</p>
+                                                        <button type="button" class="resendOtp-btn golden-text" id="resendError">Edit Mobile Number</button>
+                                                        </span>
+                                                    </div>
+                                                    <div class="enterotp-numberterm otpverify-sucess">
+                                                        <span class="global-icon"></span>
+                                                        <span>
+                                                        <p>OTP verification Sucess.</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="otpinput">
+                                                    <label for="otpValue">Enter your code<span>*</span></label>
+                                                    <input type="text" id="otpValue">
+                                                </div>
+                                                <div class="sendotp">
+                                                    <button type="button" class="globalbtn placeorder-btn" id="otpBtn">VERIFY</button>
+                                                </div>
+                                                <div class="resendotp">
+                                                    <p>Haven’t received OTP ?
+                                                        <span>
+                                                        <button type="button" class="resendOtp-btn golden-text" id="resendOTP">Resend</button>
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </ul>
+                                    </li>
+                                    <li class="payment-catagory">
+                                        <input type="radio" name="a-toggle" id="three" checked>      
+                                        <label for="three" class="accordion-title">debit card</label>
+                                        <ul class="test-accordion-items">
+                                            <div id="COD" class="tab_content1 cashondelivery">
+                                                <div class="payheading1">
+                                                    <p>Cash On Delivery</p>
+                                                </div>
+                                                <form action="https://www.styfi.in/checkout-order" method="post">
+                                                    <input type="hidden" id="COD" name="payment_method_type" value="COD" class="address-selection">
+                                                    <p class="totalAmt-pay">Total Amount Payable at the time of delivery : <span>Rs</span> <span class="payabaleAmt">1200                            .</span></p>
+                                                    <!--<p class="deliveryday">Standard Delivery in max 7 days.</p>-->
+                                                    <div class="codentermobile-number">
+                                                    <p class="entermob-numberterm">Includes <span id="codcharge">0</span> as convenience charge for Cash on Delivery
+                                                    </p>
+                                                    <p class="entermob-numberterm">
+                                                        All valid notes are accepted, including newly launched Rs.500 and Rs.2000 notes. You can also
+                                                        opt for Card on Delivery, subject to availability of card swipe machine.
+                                                        We recommend the use of Online payment methods for a smoother experience.
+                                                    </p>
+                                                    <div class="sendotp">
+                                                        <button type="submit" class="globalbtn placeorder-btn">
+                                                        Place Order
+                                                        </button>
+                                                    </div>
+                                                    <!--<div class="otpinput">
+                                                        <label for="">Mobile Number<span>*</span></label>
+                                                        <input type="text" id="otpMobile">
+                                                        </div>
+                                                        <div class="sendotp">
+                                                        <button type="button" class="globalbtn placeorder-btn" id="sendOTPBtn">
+                                                            Send OTP
+                                                        </button>
+                                                        <span class="mobileMsg"></span>
+                                                        </div>-->
+                                                    </div>
+                                                </form>
+                                                <div class="codenterotp-number" style="display:none">
+                                                <p class="entermob-numberterm enterotp-numberterm">
+                                                    We have sent you the One Time Password (OTP) on the
+                                                    above mentioned mobile number.
+                                                </p>
+                                                <!--OTP error message-->
+                                                <div class="otp-verification">
+                                                    <div class="enterotp-numberterm otpverify-error">
+                                                        <span class="global-icon"></span>
+                                                        <span>
+                                                        <p>OTP verification failed.</p>
+                                                        <button type="button" class="resendOtp-btn golden-text" id="resendError">Edit Mobile Number</button>
+                                                        </span>
+                                                    </div>
+                                                    <div class="enterotp-numberterm otpverify-sucess">
+                                                        <span class="global-icon"></span>
+                                                        <span>
+                                                        <p>OTP verification Sucess.</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="otpinput">
+                                                    <label for="otpValue">Enter your code<span>*</span></label>
+                                                    <input type="text" id="otpValue">
+                                                </div>
+                                                <div class="sendotp">
+                                                    <button type="button" class="globalbtn placeorder-btn" id="otpBtn">VERIFY</button>
+                                                </div>
+                                                <div class="resendotp">
+                                                    <p>Haven’t received OTP ?
+                                                        <span>
+                                                        <button type="button" class="resendOtp-btn golden-text" id="resendOTP">Resend</button>
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </ul>
+                                    </li>
+                                    <li class="payment-catagory">
+                                        <input type="radio" name="a-toggle" id="four" checked>      
+                                        <label for="four" class="accordion-title">credit card</label>
+                                        <ul class="test-accordion-items">
+                                            <div id="COD" class="tab_content cashondelivery">
+                                                <div class="payheading1">
+                                                    <p>Cash On Delivery</p>
+                                                </div>
+                                                <form action="https://www.styfi.in/checkout-order" method="post">
+                                                    <input type="hidden" id="COD" name="payment_method_type" value="COD" class="address-selection">
+                                                    <p class="totalAmt-pay">Total Amount Payable at the time of delivery : <span>Rs</span> <span class="payabaleAmt">1200                            .</span></p>
+                                                    <!--<p class="deliveryday">Standard Delivery in max 7 days.</p>-->
+                                                    <div class="codentermobile-number">
+                                                    <p class="entermob-numberterm">Includes <span id="codcharge">0</span> as convenience charge for Cash on Delivery
+                                                    </p>
+                                                    <p class="entermob-numberterm">
+                                                        All valid notes are accepted, including newly launched Rs.500 and Rs.2000 notes. You can also
+                                                        opt for Card on Delivery, subject to availability of card swipe machine.
+                                                        We recommend the use of Online payment methods for a smoother experience.
+                                                    </p>
+                                                    <div class="sendotp">
+                                                        <button type="submit" class="globalbtn placeorder-btn">
+                                                        Place Order
+                                                        </button>
+                                                    </div>
+                                                    <!--<div class="otpinput">
+                                                        <label for="">Mobile Number<span>*</span></label>
+                                                        <input type="text" id="otpMobile">
+                                                        </div>
+                                                        <div class="sendotp">
+                                                        <button type="button" class="globalbtn placeorder-btn" id="sendOTPBtn">
+                                                            Send OTP
+                                                        </button>
+                                                        <span class="mobileMsg"></span>
+                                                        </div>-->
+                                                    </div>
+                                                </form>
+                                                <div class="codenterotp-number" style="display:none">
+                                                <p class="entermob-numberterm enterotp-numberterm">
+                                                    We have sent you the One Time Password (OTP) on the
+                                                    above mentioned mobile number.
+                                                </p>
+                                                <!--OTP error message-->
+                                                <div class="otp-verification">
+                                                    <div class="enterotp-numberterm otpverify-error">
+                                                        <span class="global-icon"></span>
+                                                        <span>
+                                                        <p>OTP verification failed.</p>
+                                                        <button type="button" class="resendOtp-btn golden-text" id="resendError">Edit Mobile Number</button>
+                                                        </span>
+                                                    </div>
+                                                    <div class="enterotp-numberterm otpverify-sucess">
+                                                        <span class="global-icon"></span>
+                                                        <span>
+                                                        <p>OTP verification Sucess.</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="otpinput">
+                                                    <label for="otpValue">Enter your code<span>*</span></label>
+                                                    <input type="text" id="otpValue">
+                                                </div>
+                                                <div class="sendotp">
+                                                    <button type="button" class="globalbtn placeorder-btn" id="otpBtn">VERIFY</button>
+                                                </div>
+                                                <div class="resendotp">
+                                                    <p>Haven’t received OTP ?
+                                                        <span>
+                                                        <button type="button" class="resendOtp-btn golden-text" id="resendOTP">Resend</button>
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+  
+                        <div class="addaddr__left">
+                            <div class="payment__rightcard">
+                                <div class="payment__payee-details">
+                                    <div class="paymentdel__address">
+                                        <p class="paymentdel__heading">DELIVER TO</p>
+                                        <div class="summeryseprator"></div>
+                                    </div>
+                                    <div class="paymentdel__details">
+                                        <div class="payee__details">
+                                            <p class="payee__name">Alok Ojha</p>
+                                            <p class="payee__change">Change</p>
+                                        </div>
+                                        <div class="payee__address">
+                                            <p class="payee__deladdr">Lotus Corporate Park, 502 D- Wing, Ram Mandir Lane, Jai Coach Junction, Western Express Hwy, Goregaon East<br>
+                                                <span>Mumbai  400063</span><br>
+                                                <span>Maharashtra</span><br>
+                                            </p>
+                                            <span class="payee__number">
+                                            <span class="payee__delnumber">Mobile : 9702610384</span>
+                                            <span class="deladdr__cat">Home Address</span>
+                                        </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="summery">
+                                    <p class="delivery__heading">ORDER SUMMARY</p>
+                                    <div class="summeryseprator"></div>
+                                    <div class="summery__price">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-7 col-xs-6">
+                                                    <p class="rs__heading">Price</p>
+                                                </div>
+                                                <div class="col-md-5 col-xs-6">
+                                                    <p class="rs__align">RS.21600</p>
+                                                </div>
+                                                <div class="col-md-7 col-xs-6">
+                                                    <p class="rs__heading">Saving</p>
+                                                </div>
+                                                <div class="col-md-5 col-xs-6">
+                                                    <p class="rs__align rs__highlight">-RS.6000</p>
+                                                </div>
+                                                <div class="col-md-7 col-xs-6">
+                                                    <p class="rs__heading">Delivery Charges</p>
+                                                </div>
+                                                <div class="col-md-5 col-xs-6">
+                                                    <p class="rs__align rs__highlight">FREE</p>
+                                                </div>
+                                                <div class="col-md-7 col-xs-6">
+                                                    <p class="rs__heading">Total VAT </p>
+                                                </div>
+                                                <div class="col-md-5 col-xs-6">
+                                                    <p class="rs__align">RS.50</p>
+                                                </div>
+                                                <div class="col-md-12 summeryseprator"></div>
+                                                <div class="col-md-7 col-xs-6">
+                                                    <p class="rs__total">Total Price</p>
+                                                </div>
+                                                <div class="col-md-5 col-xs-6">
+                                                    <p class="rs__ptotal">RS.15650</p>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="payment__continue">
+                                                        <button type="button" class="newaddr__continue">CONTINUE TO PAYMENT</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            </section>
+
+            </div>
+        </div>
+         <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+        <!--<script src="../js/app/payment.js"></script>-->
+    </body>
+</html>
