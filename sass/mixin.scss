@@ -1,0 +1,53 @@
+@mixin overlay() {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+//calculate the padding-bottom for the image
+@function calcPadding($width,$height){
+  @return ($height/$width)*100%;
+}
+
+/* rem calculator */
+@function calc-rem($target) {
+  @return ($target / 16) * 1rem;
+}
+@function calc-em($target, $context: 16) {
+  @return ($target / $context) * 1em;
+}
+
+
+/*====mixin for media query=====*/
+@mixin breakpoint-min($point){
+  @media only screen and (min-width: $point) { @content ; }
+}
+@mixin breakpoint-max($point){
+  @media only screen and (max-width:$point){@content;}
+}
+
+@mixin breakpoint-range($point1,$point2){
+  @media only screen and (min-width:$point1) and (max-width:$point2){@content;}
+}
+
+
+////////placeholder////////////
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    @content;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}

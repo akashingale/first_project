@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+    //     var marker;
+    //   function initMap() {
+    //     var mumbai = {lat: 19.0760, lng: 72.8777};
+    //     var map = new google.maps.Map(document.getElementById('map'), {
+    //       zoom: 4,
+    //       center: mumbai
+    //     });
+    //     marker = new google.maps.Marker({
+    //       position: mumbai,
+    //       map: map
+    //     });
+    //   }
+    //   function toggleBounce() {
+    //     if (marker.getAnimation() !== null) {
+    //         marker.setAnimation(null);
+    //     } else {
+    //         marker.setAnimation(google.maps.Animation.BOUNCE);
+    //     }
+    // }
+
+    var marker;
+
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 6,
+        center: {lat: 19.0760, lng: 72.8777}
+    });
+
+    marker = new google.maps.Marker({
+        map: map,
+        draggable: true,
+        animation: google.maps.Animation.DROP,
+        position: {lat: 19.0760, lng:72.8777}
+    });
+    marker.addListener('click', toggleBounce);
+    }
+
+    function toggleBounce() {
+        if (marker.getAnimation() !== null) {
+            marker.setAnimation(null);
+        } else {
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+    }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8MtV4SIFDMq-w3XDSdQKuizkU1n31OQw&callback=initMap">
+    </script>
+  </body>
+</html>
